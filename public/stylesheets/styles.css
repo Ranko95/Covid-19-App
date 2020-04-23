@@ -1,0 +1,140 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: whitesmoke;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+header {
+  text-align: center;
+  padding: 50px 0;
+}
+
+#header_nav {
+  margin-top: 30px;
+}
+
+.nav-link {
+  margin: 0 5px;
+  color: black;
+  font-size: 1.2rem;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#main_cards-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.card {
+  background-color: white;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.card-cont-wrap h3 {
+  color: grey;
+}
+
+.infected-card {
+  border-bottom: 8px solid #4d79ff;
+}
+
+.recoveries-card {
+  border-bottom: 8px solid #8cff66;
+}
+
+.deaths-card {
+  border-bottom: 8px solid #ff4d4d;
+}
+
+.card-cont-wrap {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+#main_select-container {
+  margin-top: 40px;
+}
+
+#main_charts-container {
+  margin: 50px auto 0 auto;
+  width: 80%;
+  height: 500px;
+  position: relative;
+}
+
+#login-form, #signup-form {
+  margin-top: 50px;
+}
+
+form {
+  border: 3px solid #f1f1f1;
+  width: 50%;
+  margin: 0 auto;
+}
+
+/* Full-width inputs */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+/* Add a hover effect for buttons */
+button:hover {
+  opacity: 0.8;
+}
+
+/* Add padding to containers */
+.container {
+  padding: 16px;
+}
+
+@media(max-width: 1000px) {
+  #main_cards-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media(max-width: 500px) {
+  #main_cards-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  #logo {
+    width: 250px;
+  }
+}
