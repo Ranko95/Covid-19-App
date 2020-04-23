@@ -124,6 +124,10 @@ button:hover {
   padding: 16px;
 }
 
+.popup {
+  color: red;
+}
+
 @media(max-width: 1000px) {
   #main_cards-container {
     grid-template-columns: repeat(2, 1fr);

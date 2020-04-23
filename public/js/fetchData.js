@@ -38,15 +38,15 @@ async function fetchData(url) {
 
 async function sumDataFetch() {
   const resultSum = await fetchData('https://api.covid19api.com/summary');
-  const confirmedSum = toDivide(resultSum.Global.TotalConfirmed);
-  const recoveredSum = toDivide(resultSum.Global.TotalRecovered);
-  const deathsSum = toDivide(resultSum.Global.TotalDeaths);
+  const confirmedSum = resultSum.Global.TotalConfirmed;
+  const recoveredSum = resultSum.Global.TotalRecovered;
+  const deathsSum = resultSum.Global.TotalDeaths;
   let date = new Date(resultSum.Date);
   date = getDate(date);
 
-  infectedCard.querySelector('h2.infected').innerText = confirmedSum;
-  recoveriesCard.querySelector('h2.recovered').innerText = recoveredSum;
-  deathsCard.querySelector('h2.deaths').innerText = deathsSum;
+  infectedCard.querySelector('h2.infected').innerText = toDivide(confirmedSum);
+  recoveriesCard.querySelector('h2.recovered').innerText = toDivide(recoveredSum);
+  deathsCard.querySelector('h2.deaths').innerText = toDivide(deathsSum);
 
   infectedCard.querySelector('h3.date').innerText = date;
   recoveriesCard.querySelector('h3.date').innerText = date;

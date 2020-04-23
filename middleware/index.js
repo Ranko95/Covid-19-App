@@ -35,6 +35,11 @@ module.exports = (app) => {
 
   app.use(cookiesCleaner);
 
+  app.use((req, res, next) => {
+    res.locals.user = req.session.user;
+    next();
+  });
+
   // Подключаем статику
   app.use(express.static(path.join(__dirname, '..', 'public')));
 

@@ -3,22 +3,30 @@
 
 <head>
   <title>Covid-19 Tracker</title>
-  <link rel="stylesheet" href="./stylesheets/styles.css">
-  <link rel="shortcut icon" href="./images/favicon.png" type="image/png">
+  <link rel="stylesheet" href="../stylesheets/styles.css">
+  <link rel="shortcut icon" href="../images/favicon.png" type="image/png">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.js"
     integrity="sha256-nZaxPHA2uAaquixjSDX19TmIlbRNCOrf5HO1oHl5p70=" crossorigin="anonymous"></script>
-  <script defer src="./js/countries-dropdown.js"></script>
-  <script defer src="./js/graphs.js"></script>
-  <script defer src="./js/fetchData.js"></script>
+  <script defer src="../js/countries-dropdown.js"></script>
+  <script defer src="../js/graphs.js"></script>
+  <script defer src="../js/fetchData.js"></script>
+  <script defer src="../js/application.js"></script>
 </head>
 
 <body>
   <header>
-    <img id="logo" src="./images/covid.png" alt="covid-19-logo">
+    <img id="logo" src="../images/covid.png" alt="covid-19-logo">
     <div id="header_nav">
-      <a class="nav-link" href="">Signup</a>
-      <a class="nav-link" href="">Login</a>
-      <a class="nav-link" href="">Chat</a>
+      {{#if user}}
+      <a class="nav-link" href="/auth/logout">Logout</a>
+      <a class="nav-link" href="/">Home</a>
+      <a class="nav-link" href="/chat">Chat</a>
+      {{else}}
+      <a class="nav-link" href="/auth/signup">Signup</a>
+      <a class="nav-link" href="/auth/login">Login</a>
+      <a class="nav-link" href="/">Home</a>
+      <a class="nav-link" href="/chat">Chat</a>
+      {{/if}}
     </div>
   </header>
   <main>
