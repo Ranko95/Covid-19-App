@@ -1,4 +1,4 @@
-const HOST = location.origin.replace(/^http/, 'wss');
+const HOST = location.origin.replace(/^http/, 'ws');
 const ws = new WebSocket(HOST);
 const messageForm = document.querySelector('#message-form');
 const messageBox = document.querySelector('#message-box');
