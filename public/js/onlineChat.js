@@ -1,5 +1,5 @@
 // const ws = new WebSocket(`ws://${document.location.hostname}:40510`);
-const HOST = location.origin.replace(/^http/, 'ws');
+const HOST = location.origin.replace(/^http/, 'wss');
 const ws = new WebSocket(HOST);
 const messageForm = document.querySelector('#message-form');
 const messageBox = document.querySelector('#message-box');
