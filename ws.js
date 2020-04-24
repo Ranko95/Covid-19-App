@@ -2,8 +2,7 @@
 const WebSocketServer = require('ws').Server;
 const moment = require('moment');
 
-// const wss = new WebSocketServer({ port: 40510 });
-const wss = new WebSocketServer({ WebSocketServer });
+const wss = new WebSocketServer({ port: 40510 });
 
 const connections = new Set();
 
