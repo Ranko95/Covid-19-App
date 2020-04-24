@@ -28,7 +28,7 @@ module.exports = (app) => {
       resave: false,
       saveUninitialized: false,
       cookie: {
-        expires: 600000,
+        expires: 6000000,
       },
     }),
   );
