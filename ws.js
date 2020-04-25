@@ -1,9 +1,9 @@
 /* eslint-disable no-restricted-syntax */
 const WebSocketServer = require('ws').Server;
 const moment = require('moment');
-const app = require('./app');
+const { server } = require('./server');
 
-const wss = new WebSocketServer({ app });
+const wss = new WebSocketServer({ server });
 
 const connections = new Set();
 
