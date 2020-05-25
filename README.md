@@ -1,2 +1,2 @@
 # Covid-19-App
-![](covid-19.gif)
+![](readme-assets/covid-19.gif)
