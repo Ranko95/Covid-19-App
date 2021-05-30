@@ -31,7 +31,7 @@
     "mongoose": "^5.9.10",
     "morgan": "^1.10.0",
     "session-file-store": "^1.4.0",
-    "ws": "^7.2.3"
+    "ws": "^7.4.6"
   },
   "devDependencies": {
     "eslint": "^6.8.0",
